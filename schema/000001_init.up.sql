@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS settings
+(
+    id      SERIAL PRIMARY KEY NOT NULL,
+    name    VARCHAR(255)       NOT NULL,
+    color   VARCHAR(255)       NOT NULL,
+    lives   SMALLINT           NOT NULL CHECK (lives >= 0),
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

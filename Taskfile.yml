@@ -1,0 +1,49 @@
+# https://taskfile.dev
+version: '3'
+
+tasks:
+  stop-all:
+    desc: "Stop and remove"
+    cmd: docker-compose -f deploy/docker-compose.yml down -v
+
+  start-all:
+    desc: "Start PostgreSQL database, PG Admin and Server"
+    deps:
+      - docker-build-image
+    cmds:
+      - docker-compose -f deploy/docker-compose.yml up -d --build
+
+  start-db:
+    desc: "Start PostgreSQL database"
+    cmds:
+      - docker-compose -f deploy/docker-compose.yml up -d migrate
+
+  # util
+  install-migrate:
+    desc: "Install the migrate tool (if you need to migrate it manually)"
+    cmd: go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
+
+  migrate:
+    desc: "Run database migration (see docker-compose for migration via docker)"
+    cmd: migrate -path ./schema -database 'postgres://postgres:1234@localhost:5432/postgres?sslmode=disable' up
+
+  # docker
+  docker-build-image:
+    desc: "Docker build app image"
+    cmd: docker build -t settings-loader:latest -f deploy/Dockerfile .
+
+  docker-run-container:
+    desc: "Docker run app server"
+    cmd: docker run -p 50051:50051 -e DB_HOST="host.docker.internal" -v ./resources:/app/resources -v ./configs:/app/configs -it --rm --name settings-loader settings-loader
+
+  #  development
+  app-run-server:
+    desc: "Build and run server side app"
+    cmds:
+      - go build ./cmd/
+      - go run ./cmd/server/main.go
+  app-run-client:
+    desc: "Build and run client side app"
+    cmds:
+      - go build ./cmd/
+      - go run ./cmd/client/main.go

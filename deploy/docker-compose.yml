@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-1234}
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - settings_loader_net
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+       - pgadmin:/var/lib/pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - settings_loader_net
+    restart: unless-stopped
+
+  migrate:
+    image: migrate/migrate:latest
+    command: [ "-path", "/migrations", "-database", "postgres://postgres:1234@postgres_container:5432/postgres?sslmode=disable", "up" ]
+    volumes:
+      - ../schema:/migrations
+    depends_on:
+      - postgres
+    networks:
+      - settings_loader_net
+    restart: on-failure
+
+  app-server:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: settings_loader
+    environment:
+      - DB_HOST=postgres_container
+    ports:
+      - "50051:50051"
+    volumes:
+      - ../resources:/app/resources
+      - ../configs:/app/configs
+    depends_on:
+      - postgres
+      - migrate
+    networks:
+      - settings_loader_net
+    restart: on-failure
+
+networks:
+  settings_loader_net:
+    driver: bridge
+
+volumes:
+    postgres:
+    pgadmin:

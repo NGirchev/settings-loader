@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "name": "human",
+    "color": "blue",
+    "lives": 1
+  },
+  {
+    "id": 2,
+    "name": "robot",
+    "color": "yellow",
+    "lives": 5
+  },
+  {
+    "id": 3,
+    "name": "alien",
+    "color": "green",
+    "lives": 10
+  },
+  {
+    "id": 4,
+    "name": "robot",
+    "color": "blue",
+    "lives": 5
+  },
+  {
+    "id": 5,
+    "name": "alien",
+    "color": "blue",
+    "lives": 4
+  },
+  {
+    "id": 6,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 5
+  },
+  {
+    "id": 7,
+    "name": "robot",
+    "color": "blue",
+    "lives": 7
+  },
+  {
+    "id": 8,
+    "name": "robot",
+    "color": "green",
+    "lives": 8
+  },
+  {
+    "id": 9,
+    "name": "robot",
+    "color": "green",
+    "lives": 6
+  },
+  {
+    "id": 10,
+    "name": "alien",
+    "color": "yellow",
+    "lives": 1
+  },
+  {
+    "id": 11,
+    "name": "human",
+    "color": "red",
+    "lives": 10
+  },
+  {
+    "id": 12,
+    "name": "human",
+    "color": "yellow",
+    "lives": 4
+  },
+  {
+    "id": 13,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 1
+  },
+  {
+    "id": 14,
+    "name": "zombie",
+    "color": "red",
+    "lives": 2
+  },
+  {
+    "id": 15,
+    "name": "human",
+    "color": "yellow",
+    "lives": 4
+  },
+  {
+    "id": 16,
+    "name": "human",
+    "color": "blue",
+    "lives": 9
+  },
+  {
+    "id": 17,
+    "name": "robot",
+    "color": "green",
+    "lives": 3
+  },
+  {
+    "id": 18,
+    "name": "human",
+    "color": "red",
+    "lives": 5
+  },
+  {
+    "id": 19,
+    "name": "robot",
+    "color": "red",
+    "lives": 1
+  },
+  {
+    "id": 20,
+    "name": "robot",
+    "color": "yellow",
+    "lives": 6
+  },
+  {
+    "id": 21,
+    "name": "alien",
+    "color": "yellow",
+    "lives": 8
+  },
+  {
+    "id": 22,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 10
+  },
+  {
+    "id": 23,
+    "name": "alien",
+    "color": "red",
+    "lives": 2
+  },
+  {
+    "id": 24,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 2
+  },
+  {
+    "id": 25,
+    "name": "robot",
+    "color": "blue",
+    "lives": 9
+  },
+  {
+    "id": 26,
+    "name": "robot",
+    "color": "yellow",
+    "lives": 7
+  },
+  {
+    "id": 27,
+    "name": "zombie",
+    "color": "green",
+    "lives": 3
+  },
+  {
+    "id": 28,
+    "name": "human",
+    "color": "red",
+    "lives": 6
+  },
+  {
+    "id": 29,
+    "name": "alien",
+    "color": "green",
+    "lives": 5
+  },
+  {
+    "id": 30,
+    "name": "robot",
+    "color": "red",
+    "lives": 5
+  },
+  {
+    "id": 31,
+    "name": "robot",
+    "color": "blue",
+    "lives": 4
+  },
+  {
+    "id": 32,
+    "name": "human",
+    "color": "blue",
+    "lives": 9
+  },
+  {
+    "id": 33,
+    "name": "human",
+    "color": "blue",
+    "lives": 5
+  },
+  {
+    "id": 34,
+    "name": "zombie",
+    "color": "green",
+    "lives": 4
+  },
+  {
+    "id": 35,
+    "name": "alien",
+    "color": "yellow",
+    "lives": 10
+  },
+  {
+    "id": 36,
+    "name": "robot",
+    "color": "red",
+    "lives": 7
+  },
+  {
+    "id": 37,
+    "name": "robot",
+    "color": "blue",
+    "lives": 4
+  },
+  {
+    "id": 38,
+    "name": "robot",
+    "color": "green",
+    "lives": 4
+  },
+  {
+    "id": 39,
+    "name": "robot",
+    "color": "blue",
+    "lives": 4
+  },
+  {
+    "id": 40,
+    "name": "alien",
+    "color": "green",
+    "lives": 7
+  },
+  {
+    "id": 41,
+    "name": "alien",
+    "color": "red",
+    "lives": 6
+  },
+  {
+    "id": 42,
+    "name": "alien",
+    "color": "red",
+    "lives": 3
+  },
+  {
+    "id": 43,
+    "name": "human",
+    "color": "blue",
+    "lives": 6
+  },
+  {
+    "id": 44,
+    "name": "alien",
+    "color": "yellow",
+    "lives": 7
+  },
+  {
+    "id": 45,
+    "name": "human",
+    "color": "yellow",
+    "lives": 10
+  },
+  {
+    "id": 46,
+    "name": "alien",
+    "color": "red",
+    "lives": 2
+  },
+  {
+    "id": 47,
+    "name": "human",
+    "color": "yellow",
+    "lives": 5
+  },
+  {
+    "id": 48,
+    "name": "robot",
+    "color": "blue",
+    "lives": 10
+  },
+  {
+    "id": 49,
+    "name": "zombie",
+    "color": "red",
+    "lives": 5
+  },
+  {
+    "id": 50,
+    "name": "human",
+    "color": "red",
+    "lives": 2
+  },
+  {
+    "id": 51,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 2
+  },
+  {
+    "id": 52,
+    "name": "human",
+    "color": "red",
+    "lives": 1
+  },
+  {
+    "id": 53,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 2
+  },
+  {
+    "id": 54,
+    "name": "alien",
+    "color": "blue",
+    "lives": 4
+  },
+  {
+    "id": 55,
+    "name": "robot",
+    "color": "red",
+    "lives": 8
+  },
+  {
+    "id": 56,
+    "name": "alien",
+    "color": "red",
+    "lives": 2
+  },
+  {
+    "id": 57,
+    "name": "human",
+    "color": "green",
+    "lives": 10
+  },
+  {
+    "id": 58,
+    "name": "alien",
+    "color": "blue",
+    "lives": 4
+  },
+  {
+    "id": 59,
+    "name": "zombie",
+    "color": "yellow",
+    "lives": 10
+  },
+  {
+    "id": 60,
+    "name": "human",
+    "color": "yellow",
+    "lives": 5
+  },
+  {
+    "id": 61,
+    "name": "zombie",
+    "color": "red",
+    "lives": 1
+  },
+  {
+    "id": 62,
+    "name": "alien",
+    "color": "green",
+    "lives": 6
+  },
+  {
+    "id": 63,
+    "name": "human",
+    "color": "yellow",
+    "lives": 8
+  },
+  {
+    "id": 64,
+    "name": "zombie",
+    "color": "yellow",
+    "lives": 4
+  },
+  {
+    "id": 65,
+    "name": "alien",
+    "color": "red",
+    "lives": 8
+  },
+  {
+    "id": 66,
+    "name": "human",
+    "color": "blue",
+    "lives": 7
+  },
+  {
+    "id": 67,
+    "name": "human",
+    "color": "yellow",
+    "lives": 3
+  },
+  {
+    "id": 68,
+    "name": "zombie",
+    "color": "green",
+    "lives": 7
+  },
+  {
+    "id": 69,
+    "name": "zombie",
+    "color": "green",
+    "lives": 4
+  },
+  {
+    "id": 70,
+    "name": "human",
+    "color": "blue",
+    "lives": 9
+  },
+  {
+    "id": 71,
+    "name": "human",
+    "color": "green",
+    "lives": 9
+  },
+  {
+    "id": 72,
+    "name": "human",
+    "color": "red",
+    "lives": 10
+  },
+  {
+    "id": 73,
+    "name": "alien",
+    "color": "green",
+    "lives": 1
+  },
+  {
+    "id": 74,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 7
+  },
+  {
+    "id": 75,
+    "name": "alien",
+    "color": "green",
+    "lives": 9
+  },
+  {
+    "id": 76,
+    "name": "zombie",
+    "color": "yellow",
+    "lives": 8
+  },
+  {
+    "id": 77,
+    "name": "zombie",
+    "color": "red",
+    "lives": 4
+  },
+  {
+    "id": 78,
+    "name": "human",
+    "color": "red",
+    "lives": 1
+  },
+  {
+    "id": 79,
+    "name": "zombie",
+    "color": "yellow",
+    "lives": 8
+  },
+  {
+    "id": 80,
+    "name": "alien",
+    "color": "green",
+    "lives": 2
+  },
+  {
+    "id": 81,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 8
+  },
+  {
+    "id": 82,
+    "name": "zombie",
+    "color": "yellow",
+    "lives": 5
+  },
+  {
+    "id": 83,
+    "name": "human",
+    "color": "green",
+    "lives": 2
+  },
+  {
+    "id": 84,
+    "name": "alien",
+    "color": "red",
+    "lives": 5
+  },
+  {
+    "id": 85,
+    "name": "alien",
+    "color": "yellow",
+    "lives": 2
+  },
+  {
+    "id": 86,
+    "name": "robot",
+    "color": "blue",
+    "lives": 8
+  },
+  {
+    "id": 87,
+    "name": "human",
+    "color": "yellow",
+    "lives": 10
+  },
+  {
+    "id": 88,
+    "name": "zombie",
+    "color": "red",
+    "lives": 7
+  },
+  {
+    "id": 89,
+    "name": "zombie",
+    "color": "yellow",
+    "lives": 8
+  },
+  {
+    "id": 90,
+    "name": "zombie",
+    "color": "yellow",
+    "lives": 9
+  },
+  {
+    "id": 91,
+    "name": "human",
+    "color": "blue",
+    "lives": 6
+  },
+  {
+    "id": 92,
+    "name": "robot",
+    "color": "blue",
+    "lives": 5
+  },
+  {
+    "id": 93,
+    "name": "human",
+    "color": "yellow",
+    "lives": 1
+  },
+  {
+    "id": 94,
+    "name": "robot",
+    "color": "green",
+    "lives": 4
+  },
+  {
+    "id": 95,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 5
+  },
+  {
+    "id": 96,
+    "name": "zombie",
+    "color": "blue",
+    "lives": 6
+  },
+  {
+    "id": 97,
+    "name": "zombie",
+    "color": "green",
+    "lives": 9
+  },
+  {
+    "id": 98,
+    "name": "robot",
+    "color": "blue",
+    "lives": 5
+  },
+  {
+    "id": 99,
+    "name": "alien",
+    "color": "green",
+    "lives": 4
+  },
+  {
+    "id": 100,
+    "name": "human",
+    "color": "yellow",
+    "lives": 7
+  }
+]

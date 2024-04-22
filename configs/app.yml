@@ -1,0 +1,14 @@
+db:
+  username: "postgres"
+  password: "1234"
+  host: "${DB_HOST:localhost}"
+  port: "5432"
+  dbname: "postgres"
+  sslMode: "disable"
+
+app:
+  api:
+    bindAddress: ":50051"
+  path: "resources"
+  hash: "md5"
+  logLevel: "debug"
