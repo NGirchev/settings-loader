@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/ngirchev/settings-loader/cmd"
+	"github.com/ngirchev/settings-loader/internal/api"
+	"github.com/ngirchev/settings-loader/internal/util"
 	log "github.com/sirupsen/logrus"
 	"net/rpc"
-	"settings-loader/cmd"
-	"settings-loader/internal/api"
-	"settings-loader/internal/util"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package postgresql
 import (
 	"fmt"
 	"github.com/jmoiron/sqlx"
-	"settings-loader/internal/domain"
+	"github.com/ngirchev/settings-loader/internal/domain"
 )
 
 type SettingsRepo struct {

@@ -1,6 +1,6 @@
 package util
 
-import "settings-loader/internal/service/json"
+import "github.com/ngirchev/settings-loader/internal/service/json"
 
 func SplitArrayIntoBatches(arr []json.SettingsDTO, batchSize int) [][]json.SettingsDTO {
 	var batches [][]json.SettingsDTO

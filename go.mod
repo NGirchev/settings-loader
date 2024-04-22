@@ -1,4 +1,4 @@
-module settings-loader
+module github.com/ngirchev/settings-loader
 
 go 1.22
 

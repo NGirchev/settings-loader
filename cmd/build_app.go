@@ -2,11 +2,11 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/ngirchev/settings-loader/internal/api"
+	"github.com/ngirchev/settings-loader/internal/domain/postgresql"
+	"github.com/ngirchev/settings-loader/internal/util"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
-	"settings-loader/internal/api"
-	"settings-loader/internal/domain/postgresql"
-	"settings-loader/internal/util"
 )
 
 const (

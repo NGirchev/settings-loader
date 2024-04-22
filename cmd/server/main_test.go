@@ -1,24 +1,34 @@
 package main
 
 import (
+	"errors"
 	"fmt"
+	"github.com/ngirchev/settings-loader/cmd"
+	"github.com/ngirchev/settings-loader/internal/api"
+	"github.com/ngirchev/settings-loader/internal/util"
 	"github.com/stretchr/testify/assert"
+	"net"
 	"net/rpc"
-	"settings-loader/cmd"
-	"settings-loader/internal/api"
-	"settings-loader/internal/util"
 	"strings"
-	"sync"
 	"testing"
+	"time"
 )
 
 // run db before
 func TestRunAllE2E(t *testing.T) {
 	// before all
-	startServer()
-	//time.Sleep(1 * time.Second)
-
+	if err := cmd.InitConfig(); err != nil {
+		panic(fmt.Sprintf("Couldnt initialize the config file: %s", err))
+	}
+	cmd.SetupLogging()
 	appProps := cmd.BuildAppConf()
+
+	host := "localhost" + appProps.ServerConf.BindAddress
+	if checkPortAvailability(host) {
+		go main()
+		time.Sleep(1 * time.Second)
+	}
+
 	client, err := rpc.Dial("tcp", "localhost"+appProps.ServerConf.BindAddress)
 	util.HandleError("client error", err)
 
@@ -34,32 +44,37 @@ func TestRunAllE2E(t *testing.T) {
 	}
 }
 
+func checkPortAvailability(host string) bool {
+	conn, err := net.Dial("tcp", host)
+	if err != nil {
+		return true
+	}
+	err = conn.Close()
+	if err != nil {
+		return false
+	}
+	return false
+}
+
 func startServer() {
-	var wg sync.WaitGroup
-	errorChannel := make(chan error, 1)
-
-	wg.Add(1)
-
-	go func() {
-		defer wg.Done()
-		defer close(errorChannel)
-
-		defer func() {
-			if r := recover(); r != nil {
-				errorChannel <- fmt.Errorf("caught an error: %v", r)
+	defer func() {
+		if r := recover(); r != nil {
+			var panicMessage string
+			switch v := r.(type) {
+			case error:
+				panicMessage = v.Error()
+			case string:
+				panicMessage = v
+			default:
+				panicMessage = fmt.Sprintf("unknown panic: %v", v)
 			}
-		}()
-
-		main()
+			if !strings.HasSuffix(panicMessage, "bind: address already in use") {
+				util.HandleError("Server can't start", errors.New(panicMessage))
+			}
+		}
 	}()
 
-	wg.Wait()
-
-	if err, ok := <-errorChannel; ok {
-		if !strings.HasSuffix(err.Error(), "bind: address already in use") {
-			util.HandleError("Server can't start", err)
-		}
-	}
+	main()
 }
 
 func shouldReturnContentAndDefaultValuesWhenEmptyRequest(t *testing.T, client *rpc.Client) {

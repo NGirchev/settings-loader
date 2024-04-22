@@ -3,10 +3,10 @@ package service
 import (
 	"bytes"
 	"fmt"
+	"github.com/ngirchev/settings-loader/internal/domain"
+	"github.com/ngirchev/settings-loader/internal/service/json"
+	"github.com/ngirchev/settings-loader/internal/util"
 	log "github.com/sirupsen/logrus"
-	"settings-loader/internal/domain"
-	"settings-loader/internal/service/json"
-	"settings-loader/internal/util"
 	"sync"
 )
 

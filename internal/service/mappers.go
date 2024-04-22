@@ -1,8 +1,8 @@
 package service
 
 import (
-	"settings-loader/internal/domain"
-	"settings-loader/internal/service/json"
+	"github.com/ngirchev/settings-loader/internal/domain"
+	"github.com/ngirchev/settings-loader/internal/service/json"
 )
 
 func MapToSettingEntity(dto *json.SettingsDTO) domain.SettingsEntity {

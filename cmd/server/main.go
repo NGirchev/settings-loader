@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"settings-loader/cmd"
-	"settings-loader/internal/api"
-	"settings-loader/internal/domain/postgresql"
-	"settings-loader/internal/service"
-	"settings-loader/internal/service/json"
-	"settings-loader/internal/util"
+	"github.com/ngirchev/settings-loader/cmd"
+	"github.com/ngirchev/settings-loader/internal/api"
+	"github.com/ngirchev/settings-loader/internal/domain/postgresql"
+	"github.com/ngirchev/settings-loader/internal/service"
+	"github.com/ngirchev/settings-loader/internal/service/json"
+	"github.com/ngirchev/settings-loader/internal/util"
 )
 
 func main() {

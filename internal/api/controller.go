@@ -2,7 +2,7 @@ package api
 
 import (
 	"errors"
-	"settings-loader/internal/service"
+	"github.com/ngirchev/settings-loader/internal/service"
 )
 
 type LoaderController struct {

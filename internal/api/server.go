@@ -1,9 +1,9 @@
 package api
 
 import (
+	"github.com/ngirchev/settings-loader/internal/util"
 	"net"
 	"net/rpc"
-	"settings-loader/internal/util"
 )
 
 type RpcServer struct {

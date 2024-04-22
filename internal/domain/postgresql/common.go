@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"settings-loader/internal/util"
+	"github.com/ngirchev/settings-loader/internal/util"
 )
 
 type DBConf struct {
