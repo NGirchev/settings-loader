@@ -1,29 +1,28 @@
 # settings-loader
-
+ 
 ## Overview
 
 Settings Loader is a Go project designed to manage and load various application settings from different sources (you can
-mount your volume). For now, it's limited only JSON files sources and only one db table support, but it could be
-extended.
+mount your own volume). Currently, it supports only JSON file sources and one database table, but it could be
+extended in the future.
 
-This project is template for the future microservices. Current layout based
-on https://github.com/golang-standards/project-layout
+This project serves as a template for future microservices. The current layout is based
+on https://github.com/golang-standards/project-layout.
 
 ### API
 
-Api of this microservice - RPC Functions
+The API of this microservice comprises RPC functions.
 
 #### LoaderController.LoadComponent
 
-Main rpc function. Current implementation:
+The main RPC function, with the following current implementation:
 
-- The function reads file from the volume/disc (`path=<rootPath>/<type>/<version>.json`).
-- Saves parsed data to the postgresql database, table `settings`.
-- Calculates file content hash (by default uses `MD5Hash` function)
-- If hashes, passed through request and calculated are not equal, then parsed data won't save to db and content will be
-  nil in response. Client will get a new hash and nil content for handling the situation.
-- If file doesn't exist, then error returns.
-- Use defaults if they are not present in the payload.
+- Reads a file from the volume/disk (`path=<rootPath>/<type>/<version>.json`).
+- Saves the parsed data to the PostgreSQL database, table `settings`.
+- Calculates a file content hash (by default, it uses the `MD5Hash` function).
+- If the hashes passed through the request and the calculated hash are not equal, the parsed data won't be saved to the database, and the content will be `nil` in the response. The client will receive the new hash and `nil` content for handling the situation.
+- If the file doesn't exist, it returns an error.
+- Uses default values if they are not present in the payload.
 
 **Input Payload:**
 
@@ -120,7 +119,7 @@ Improvements:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 
 
