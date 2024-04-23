@@ -4,6 +4,7 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/ngirchev/settings-loader?style=flat-square)](https://goreportcard.com/report/github.com/ngirchev/settings-loader)
 [![Go Reference](https://pkg.go.dev/badge/github.com/ngirchev/settings-loader.svg)](https://pkg.go.dev/github.com/ngirchev/settings-loader)
+![master](https://github.com/ngirchev/settings-loader/actions/workflows/go.yml/badge.svg?branch=master)
 
 Settings Loader is a Go project designed to manage and load various application settings from different sources (you can
 mount your own volume). Currently, it supports only JSON file sources and one database table, but it could be
